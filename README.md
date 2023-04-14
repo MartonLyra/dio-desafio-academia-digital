@@ -75,6 +75,9 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Criei as interfaces de serviço: IAlunoService, IMatriculaService, IAvaliacaoFisicaService.
 
 
+- Configurei o arquivo application.yml com os dados de conexão do banco PostgreSQL local.
+
+- FATAL: database "academia" does not exist
 
 
 

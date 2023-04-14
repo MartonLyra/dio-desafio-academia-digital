@@ -9,13 +9,13 @@ Olá! Meu nome é Marton e nesse repositório vou manter o progresso de desenvol
 
 Os detalhes do desafio podem ser acessados diretamente da plataforma DIO [clicando aqui](https://web.dio.me/project/conhecendo-spring-data-jpa-na-pratica-com-java/learning/abd511f0-a5be-4f02-a204-03eb2614a12a).
 
-A instrutora é a Camila e seu repositório pode ser acessado através [desse link](https://github.com/cami-la/academia-digital). 
+A instrutora é a [Camila Cavalcante](https://www.linkedin.com/in/cami-la/) e seu repositório GitHub pode ser acessado através [desse link](https://github.com/cami-la/academia-digital). 
 
 Optei por não fazer um fork de seu projeto pois preferi criar o meu do zero.
 
 ## Objetivo:
 
-Nesse desafio vamos desenvolver uma **API RESTful** no domínio de uma academia de ginástica.
+Nesse desafio vamos desenvolver uma **API RESTful** no domínio de uma academia de ginástica usando banco de dados PostgreSQL e mapeamento objeto-relacional (ORM) usando Spring Data JPA.
 
 Vamos usar as seguintes Tecnologias:
 
@@ -32,7 +32,7 @@ Vamos usar as seguintes Tecnologias:
 
 ## Progresso:
 
-Vou tentar reportar o meu progresso diario nesse projeto, incluindo as dificuldades que tive e como resolvi.
+Vou reportar o meu progresso nesse projeto, incluindo as dificuldades que tive e como resolvi.
 
 ## 13/04/2023:
 
@@ -45,6 +45,7 @@ Vou tentar reportar o meu progresso diario nesse projeto, incluindo as dificulda
 
 - Resolvi detalhar nesse _readme.md_ o progresso do meu desenvolvimento.
 
+---
 
 - Comecei o dia [pesquisando](https://projectlombok.org/videos/lombok.mp4) sobre a biblioteca **Lombok** pois não a conhecia:
 
@@ -52,4 +53,8 @@ Vou tentar reportar o meu progresso diario nesse projeto, incluindo as dificulda
 
 Pelo que entendi, você introduz algumas tags na classe do model e os _getters, setters, toString, hashCode_, dentre outros, são gerados pela biblioteca via _Reflection_, sem necessidade de gerar e manter tais códigos. Gostei pois manteve o visual da classe do model mais limpo.
 
--  
+---
+
+- Durante o desenvolvimento, vamos ficar de olho no Diagrama ER BD:
+
+![](gitResources/Diagrama ER BD.PNG "Diagrama")

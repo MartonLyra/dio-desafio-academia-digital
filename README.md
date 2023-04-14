@@ -1,4 +1,4 @@
-# Desafio DIO Academia Digital by MartonJr
+# Desafio DIO Academia Digital by Marton Lyra
 #ContratoDeCompromissoDIO
 
 #dio-desafio-academia-digital
@@ -64,10 +64,10 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - O **fluxo back-end** será: Cliente <---> Controller <---> Service <---> Repository <---> PostgreSQL.
 
 
-- Criei as classes model 'Aluno', 'AvaliacaoFisica' e 'Matricula'; 
+- Criei as classes model [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java), [AvaliacaoFisica](src/main/java/me/dio/desafioacademiadigital/model/AvaliacaoFisica.java) e [Matricula](src/main/java/me/dio/desafioacademiadigital/model/Matricula.java); 
 
 
-- Criei as classes DTO (Data Transfer Object): AlunoDTO, AlunoUpdateDTO, AvaliacaoFisicaDTO, AvaliacaoFisicaUpdateDTO, MatriculaDTO.
+- Criei as classes DTO (Data Transfer Object): [AlunoDTO](src/main/java/me/dio/desafioacademiadigital/model/dto/AlunoDTO.java), [AlunoUpdateDTO](src/main/java/me/dio/desafioacademiadigital/model/dto/AlunoUpdateDTO.java), [AvaliacaoFisicaDTO](src/main/java/me/dio/desafioacademiadigital/model/dto/AvaliacaoFisicaDTO.java), [AvaliacaoFisicaUpdateDTO](src/main/java/me/dio/desafioacademiadigital/model/dto/AvaliacaoFisicaUpdateDTO.java), [MatriculaDTO](src/main/java/me/dio/desafioacademiadigital/model/dto/MatriculaDTO.java).
   - A instrutora Camila optou por colocar essas classes dentro do package 'entity/form' e usou o sufixo 'Form' na nomenclatura das classes.
   - Eu optei por colocá-los na package 'model/dto' e usar o sufixo 'DTO' no nome das classes.
 
@@ -88,12 +88,16 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - *org.postgresql.util.PSQLException: FATAL: database "academia" does not exist* - usando o *pgAdmin*, criei o banco de dados chamado *academia* e a aplicação rodou sem Exception.
 
 
-### Video-Aula: Anotações das Enitdades - Parte 1
+
+### Video-Aula: Anotações das Entidades - Parte 1
 
 
 - Logo no início da aula, a instrutora Camila faz uso da [biblioteca Lombok](https://projectlombok.org/). Como essa biblioteca é novidade pra mim, resolvi criar um [teste unitário](src/test/java/me/dio/desafioacademiadigital/model/AlunoTest.java) da classe [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java) para vê-lo funcionando na prática. Para testar, faço chamadas dos getters, setters, hashcode e toString, sendo que nenhum desses métodos foram implementados manualmente na classe.
 
 
+- 
+
+![Tabelas](gitResources/tabelas-db.PNG)
 
 
 

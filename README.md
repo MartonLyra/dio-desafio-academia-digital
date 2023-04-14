@@ -95,7 +95,7 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Logo no início da aula, a instrutora Camila faz uso da [biblioteca Lombok](https://projectlombok.org/). Como essa biblioteca é novidade pra mim, resolvi criar um [teste unitário](src/test/java/me/dio/desafioacademiadigital/model/AlunoTest.java) da classe [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java) para vê-lo funcionando na prática. Para testar, faço chamadas dos getters, setters, hashcode e toString, sendo que nenhum desses métodos foram implementados manualmente na classe.
 
 
-- 
+- Alterei as classes model [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java), [AvaliacaoFisica](src/main/java/me/dio/desafioacademiadigital/model/AvaliacaoFisica.java) e [Matricula](src/main/java/me/dio/desafioacademiadigital/model/Matricula.java) para colocar as annotações, tanto do **Lombok** quanto do **Spring Data JPA**. Ao executar a aplicação, as tabelas foram geradas conforme experado:
 
 ![Tabelas](gitResources/tabelas-db.PNG)
 

@@ -84,6 +84,7 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 - Configurei **Spring Data JPA** no arquivo **application.yml**: show-sql:true (queremos que o SQL gerado pelo ORM seja exibido no console); hibernate.ddl-auto: update (quando a aplicação é iniciada, o hibernate deve procurar alterações na estrutura de dados entre banco de dados e objetos relacionais e gerar os DDL e atualizar o banco de dados de forma que fique compatível com nosso entity).
 
+- Lá na aula '**Video-Aula: CRUD - Parte 1**' será adicionado mais uma propriedade para formatar o SQL.
 
 - *org.postgresql.util.PSQLException: FATAL: database "academia" does not exist* - usando o *pgAdmin*, criei o banco de dados chamado *academia* e a aplicação rodou sem Exception.
 
@@ -95,11 +96,25 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Logo no início da aula, a instrutora Camila faz uso da [biblioteca Lombok](https://projectlombok.org/). Como essa biblioteca é novidade pra mim, resolvi criar um [teste unitário](src/test/java/me/dio/desafioacademiadigital/model/AlunoTest.java) da classe [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java) para vê-lo funcionando na prática. Para testar, faço chamadas dos getters, setters, hashcode e toString, sendo que nenhum desses métodos foram implementados manualmente na classe.
 
 
-- Alterei as classes model [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java), [AvaliacaoFisica](src/main/java/me/dio/desafioacademiadigital/model/AvaliacaoFisica.java) e [Matricula](src/main/java/me/dio/desafioacademiadigital/model/Matricula.java) para colocar as annotações, tanto do **Lombok** quanto do **Spring Data JPA**. Ao executar a aplicação, as tabelas foram geradas conforme experado:
+- Alterei as classes model [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java), [AvaliacaoFisica](src/main/java/me/dio/desafioacademiadigital/model/AvaliacaoFisica.java) e [Matricula](src/main/java/me/dio/desafioacademiadigital/model/Matricula.java) para colocar as annotações, tanto do **Lombok** quanto do **Spring Data JPA**.
+
+
+### Video-Aula: Anotações das Entidades - Parte 2
+
+
+- Ao executar a aplicação, as tabelas foram geradas conforme experado:
 
 ![Tabelas](gitResources/tabelas-db.PNG)
 
+- Tomei conhecimento da ferramenta de gerenciamento GUI de banco de dados chamado [DBeaver](https://dbeaver.io/) compatível com diversos bancos de dados.
 
+
+### Video-Aula: CRUD - Parte 1
+
+- Antes de começarmos a aula de CRUD, uma observação no arquivo application.yml: foi adicionado uma configuração para que o Hibernate formate o SQL gerado que será exibido no console: properties.hibernate.format_sql: true
+
+
+- Vamos precisar converter alguns dos parâmetros web no formato data de String para LocalDate e LocalDateTime. Para isso, implementei a classe [DateTimeUtils](src/main/java/me/dio/desafioacademiadigital/infra/DateTimeUtils.java) com dois métodos: convertStringToLocalDate(String date) e convertStringToLocalDateTime(String datetime). Aproveitei e implementei também a classe [DateTimeUtilsTest](src/test/java/me/dio/desafioacademiadigital/infra/DateTimeUtilsTest.java) e percebi que os métodos podem melhorar: ele converte o String "07/05/2015" mas não converte o String "7/5/2015".
 
 
 

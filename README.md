@@ -57,7 +57,7 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 - Durante o desenvolvimento, vamos ficar de olho no Diagrama ER BD:
 
-![](gitResources/Diagrama ER BD.PNG "Diagrama")
+![Diagrama](/gitResources/Diagrama ER BD.PNG)
 
 ---
 

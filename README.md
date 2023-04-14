@@ -63,8 +63,16 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 - O **fluxo back-end** será: Cliente <---> Controller <---> Service <---> Repository <---> PostgreSQL.
 
-- Criei as classes model 'Aluno', 'AvaliacaoFisica' e 'Matricula';
-- Criei as classes DTO (Data Transfer Object). A instrutora Camila optou por colocar essas classes dentro do package 'entity/form' e usou o sufixo 'Form' na nomenclatura das classes. Eu optei por colocá-los na package 'model/dto' e usar o sufixo 'DTO' no nome das classes: AlunoDTO, AlunoUpdateDTO, AvaliacaoFisicaDTO, AvaliacaoFisicaUpdateDTO, MatriculaDTO.
+
+- Criei as classes model 'Aluno', 'AvaliacaoFisica' e 'Matricula'; 
+
+
+- Criei as classes DTO (Data Transfer Object): AlunoDTO, AlunoUpdateDTO, AvaliacaoFisicaDTO, AvaliacaoFisicaUpdateDTO, MatriculaDTO.
+  - A instrutora Camila optou por colocar essas classes dentro do package 'entity/form' e usou o sufixo 'Form' na nomenclatura das classes.
+  - Eu optei por colocá-los na package 'model/dto' e usar o sufixo 'DTO' no nome das classes.
+
+
+- Criei as interfaces de serviço: IAlunoService, IMatriculaService, IAvaliacaoFisicaService.
 
 
 

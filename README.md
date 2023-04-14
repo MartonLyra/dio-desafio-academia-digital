@@ -61,8 +61,7 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 ---
 
-- O fluxo back-end será: Cliente <---> Controllere <---> Servicee <---> Repositorye <---> PostgreSQL
-- 
+- O **fluxo back-end** será: Cliente <---> Controller <---> Service <---> Repository <---> PostgreSQL.
 
 
 

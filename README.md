@@ -1,12 +1,13 @@
 # Desafio DIO Academia Digital by MartonJr
-#ContratoDeCompromisso
+#ContratoDeCompromissoDIO
+
 #dio-desafio-academia-digital
 
 ## O Projeto Spring Data JPA - API RESTful
 
-Olá! Meu nome é Marton e nesse repositório vou manter o progresso de desenvolvimento do desafio 'Academia Digital', do Bootcamp Java da plataforma [DIO](https://www.dio.me/).
+Olá! Meu nome é Marton e nesse repositório vou manter o progresso de desenvolvimento do desafio **Academia Digital**, do Bootcamp **Banco PAN Java Developer** da plataforma [DIO](https://www.dio.me/).
 
-Os detalhes do desafio pode ser acessado diretamente [clicando aqui](https://web.dio.me/project/conhecendo-spring-data-jpa-na-pratica-com-java/learning/abd511f0-a5be-4f02-a204-03eb2614a12a).
+Os detalhes do desafio podem ser acessados diretamente da plataforma DIO [clicando aqui](https://web.dio.me/project/conhecendo-spring-data-jpa-na-pratica-com-java/learning/abd511f0-a5be-4f02-a204-03eb2614a12a).
 
 A instrutora é a Camila e seu repositório pode ser acessado através [desse link](https://github.com/cami-la/academia-digital). 
 
@@ -31,16 +32,24 @@ Vamos usar as seguintes Tecnologias:
 
 ## Progresso:
 
-Vou tentar reportar aqui o meu progresso nesse projeto, incluindo as dificuldades que tive e como resolvi.
+Vou tentar reportar o meu progresso diario nesse projeto, incluindo as dificuldades que tive e como resolvi.
 
 ## 13/04/2023:
 
 - Comecei criando um projeto usando o **Spring Initializr**. As configurações iniciais do projeto podem ser [acessadas aqui](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.5&packaging=jar&jvmVersion=17&groupId=me.dio&artifactId=desafio-academia-digital&name=desafio-academia-digital&description=Desafio%20DIO%20-%20Academia%20Digital%20by%20MartonJr&packageName=me.dio.desafio-academia-digital&dependencies=web,data-jpa,postgresql,validation,lombok). 
 - No GitHub, criei o repositório onde irei guardar o [presente projeto](https://github.com/MartonLyra/dio-desafio-academia-digital).
-- Certifiquei-me de que minha assinatura digital está devidamente configurado e que todos meus commits estão assinados por mim.
+- Certifiquei-me de que minha assinatura digital está devidamente configurado e que todos meus commits serão assinados por mim.
 - Em seguida, instalei o PostgreSQL localmente em minha máquina.
 
 ## 14/04/2023:
 
 - Resolvi detalhar nesse _readme.md_ o progresso do meu desenvolvimento.
-- 
+
+
+- Comecei o dia [pesquisando](https://projectlombok.org/videos/lombok.mp4) sobre a biblioteca **Lombok** pois não a conhecia:
+
+![Lombok](/gitResources/Lombok.png)
+
+Pelo que entendi, você introduz algumas tags na classe do model e os _getters, setters, toString, hashCode_, dentre outros, são gerados pela biblioteca via _Reflection_, sem necessidade de gerar e manter tais códigos. Gostei pois manteve o visual da classe do model mais limpo.
+
+-  

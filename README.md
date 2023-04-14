@@ -104,5 +104,6 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 
 
+
 ---
 _Base64:_ RGVzYWZpbyBESU8gIkFjYWRlbWlhIERpZ2l0YWwiLCBieSBNYXJ0b25MeXJhLCBpbmljaWFkbyBkaWEgMTMvMDQvMjAyMy4=

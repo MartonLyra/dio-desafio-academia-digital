@@ -72,7 +72,11 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
   - Eu optei por colocá-los na package 'model/dto' e usar o sufixo 'DTO' no nome das classes.
 
 
-- Criei as interfaces de serviço: IAlunoService, IMatriculaService, IAvaliacaoFisicaService.
+- Criei as interfaces de serviço: [IAlunoService](src/main/java/me/dio/desafioacademiadigital/service/IAlunoService.java), [IMatriculaService](src/main/java/me/dio/desafioacademiadigital/service/IMatriculaService.java), [IAvaliacaoFisicaService](src/main/java/me/dio/desafioacademiadigital/service/IAvaliacaoFisicaService.java).
+
+
+### Video-Aula: Configuração do Banco de Dados
+
 
 
 - Configurei o banco **PostgreSQL** no arquivo **application.yml** com os dados de conexão local: spring.datasource: url; jdbc; username; password.
@@ -82,6 +86,14 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 
 - *org.postgresql.util.PSQLException: FATAL: database "academia" does not exist* - usando o *pgAdmin*, criei o banco de dados chamado *academia* e a aplicação rodou sem Exception.
+
+
+### Video-Aula: Anotações das Enitdades - Parte 1
+
+
+- Logo no início da aula, a instrutora Camila faz uso da [biblioteca Lombok](https://projectlombok.org/). Como essa biblioteca é novidade pra mim, resolvi criar um [teste unitário](src/test/java/me/dio/desafioacademiadigital/model/AlunoTest.java) da classe [Aluno](src/main/java/me/dio/desafioacademiadigital/model/Aluno.java) para vê-lo funcionando na prática. Para testar, faço chamadas dos getters, setters, hashcode e toString, sendo que nenhum desses métodos foram implementados manualmente na classe.
+
+
 
 
 

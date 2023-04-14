@@ -1,10 +1,13 @@
 package me.dio.desafioacademiadigital.model;
 
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class Aluno {
 
     private Long id;

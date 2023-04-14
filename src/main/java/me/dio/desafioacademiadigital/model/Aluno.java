@@ -36,7 +36,7 @@ public class Aluno {
 
 
     @Column(name = "dt_nascimento_aluno")
-    private LocalDateTime dtNascimento;
+    private LocalDate dtNascimento;
 
 
     // OneToMany-mappedBy: ao fazer mapeamento, informar o atributo da classe mapeada (AvaliacaoFisica) que é do tipo da atual classe (Aluno).

@@ -114,11 +114,15 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Antes de começarmos a aula de CRUD, uma observação no arquivo application.yml: foi adicionado uma configuração para que o Hibernate formate o SQL gerado que será exibido no console: properties.hibernate.format_sql: true
 
 
-- Vamos precisar converter alguns dos parâmetros web no formato data de String para LocalDate e LocalDateTime. Para isso, implementei a classe [DateTimeUtils](src/main/java/me/dio/desafioacademiadigital/infra/DateTimeUtils.java) com dois métodos: convertStringToLocalDate(String date) e convertStringToLocalDateTime(String datetime). Aproveitei e implementei também a classe [DateTimeUtilsTest](src/test/java/me/dio/desafioacademiadigital/infra/DateTimeUtilsTest.java) e percebi que os métodos podem melhorar: ele converte o String "07/05/2015" mas não converte o String "7/5/2015".
+- Vamos precisar converter alguns dos parâmetros web no formato data de String para LocalDate e LocalDateTime. Para isso, implementei a classe [DateTimeUtils](src/main/java/me/dio/desafioacademiadigital/infra/DateTimeUtils.java) com dois métodos: **convertStringToLocalDate(String date)** e **convertStringToLocalDateTime(String datetime)**. Aproveitei e implementei também a classe [DateTimeUtilsTest](src/test/java/me/dio/desafioacademiadigital/infra/DateTimeUtilsTest.java) e percebi que os métodos podem melhorar: ele converte o String "07/05/2015" mas não converte o String "7/5/2015".
 
 
+- Criei a package 'controller' onde vamos tratar as requisições API Rest, repassar apenas as informações relevantes aos services e, após processamento, responder à requisição.
+- Criei a package 'service' onde vamos escrever as regras de negócio e controlar o acesso aos dados.
+- Criei a package 'repository' responsável pelo acesso ao banco de dados onde, no nosso caso, são interfaces que extendem de JpaRepository.
 
 
+- Implementei AlunoController, IAlunoService, AlunoServiceImpl e AlunoRepository com o método getAll(LocalDate dataNascimento), cujo parâmetro é opcional.
 
 ---
 _Base64:_ RGVzYWZpbyBESU8gIkFjYWRlbWlhIERpZ2l0YWwiLCBieSBNYXJ0b25MeXJhLCBpbmljaWFkbyBkaWEgMTMvMDQvMjAyMy4=

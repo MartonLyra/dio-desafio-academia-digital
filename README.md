@@ -58,3 +58,22 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Durante o desenvolvimento, vamos ficar de olho no Diagrama ER BD:
 
 ![](gitResources/Diagrama ER BD.PNG "Diagrama")
+
+---
+
+- O fluxo back-end será: Cliente <---> Controllere <---> Servicee <---> Repositorye <---> PostgreSQL
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+---
+_Base64:_ RGVzYWZpbyBESU8gIkFjYWRlbWlhIERpZ2l0YWwiLCBieSBNYXJ0b25MeXJhLCBpbmljaWFkbyBkaWEgMTMvMDQvMjAyMy4=

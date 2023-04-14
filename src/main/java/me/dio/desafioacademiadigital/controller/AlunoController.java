@@ -23,6 +23,17 @@ public class AlunoController {
         return service.getAll(dataDeNacimento);
     }
 
+    @PostMapping("create")
+    public Aluno create(@Valid @RequestBody AlunoDTO alunoDTO) {
+        return service.create(alunoDTO);
+    }
+
+    @GetMapping("/avaliacoes/{id}")
+    public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(@PathVariable Long id) {
+        return service.getAllAvaliacaoFisicaId(id);
+    }
+
+
 
 
 }

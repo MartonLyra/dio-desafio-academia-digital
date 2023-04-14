@@ -75,9 +75,15 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Criei as interfaces de serviço: IAlunoService, IMatriculaService, IAvaliacaoFisicaService.
 
 
-- Configurei o arquivo application.yml com os dados de conexão do banco PostgreSQL local.
+- Configurei o banco **PostgreSQL** no arquivo **application.yml** com os dados de conexão local: spring.datasource: url; jdbc; username; password.
 
-- FATAL: database "academia" does not exist
+
+- Configurei **Spring Data JPA** no arquivo **application.yml**: show-sql:true (queremos que o SQL gerado pelo ORM seja exibido no console); hibernate.ddl-auto: update (quando a aplicação é iniciada, o hibernate deve procurar alterações na estrutura de dados entre banco de dados e objetos relacionais e gerar os DDL e atualizar o banco de dados de forma que fique compatível com nosso entity).
+
+
+- *org.postgresql.util.PSQLException: FATAL: database "academia" does not exist* - usando o *pgAdmin*, criei o banco de dados chamado *academia* e a aplicação rodou sem Exception.
+
+
 
 
 

@@ -79,12 +79,17 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 
 
 
-- Configurei o banco **PostgreSQL** no arquivo **application.yml** com os dados de conexão local: spring.datasource: url; jdbc; username; password.
+- Configurei o banco **PostgreSQL** no arquivo **application.yml** com os dados de conexão local:
+  - spring.datasource: url; jdbc; username; password.
 
 
-- Configurei **Spring Data JPA** no arquivo **application.yml**: show-sql:true (queremos que o SQL gerado pelo ORM seja exibido no console); hibernate.ddl-auto: update (quando a aplicação é iniciada, o hibernate deve procurar alterações na estrutura de dados entre banco de dados e objetos relacionais e gerar os DDL e atualizar o banco de dados de forma que fique compatível com nosso entity).
+- Configurei **Spring Data JPA** no arquivo **application.yml**:
+  - show-sql:true (queremos que o SQL gerado pelo ORM seja exibido no console);
+  - hibernate.ddl-auto: update (quando a aplicação é iniciada, o hibernate deve procurar alterações na estrutura de dados entre banco de dados e objetos relacionais e gerar os DDL e atualizar o banco de dados de forma que fique compatível com nosso entity).
+
 
 - Lá na aula '**Video-Aula: CRUD - Parte 1**' será adicionado mais uma propriedade para formatar o SQL.
+
 
 - *org.postgresql.util.PSQLException: FATAL: database "academia" does not exist* - usando o *pgAdmin*, criei o banco de dados chamado *academia* e a aplicação rodou sem Exception.
 
@@ -231,7 +236,9 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
   - public Aluno create(**@Valid** @RequestBody AlunoDTO alunoDTO) { ... }
 
 
- 
+- **Conclusão: desafio DIO.me concluído com sucesso!**
+
+
 
 ---
 _Base64:_ RGVzYWZpbyBESU8gIkFjYWRlbWlhIERpZ2l0YWwiLCBieSBNYXJ0b25MeXJhLCBpbmljaWFkbyBkaWEgMTMvMDQvMjAyMy4=

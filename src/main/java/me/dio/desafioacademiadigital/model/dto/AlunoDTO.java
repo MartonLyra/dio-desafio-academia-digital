@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.br.CPF;
 
 import java.time.LocalDate;
 
@@ -15,15 +16,17 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class AlunoDTO {
 
+    // Validações
     @NotEmpty(message = "Preencha o campo corretamente.")
-    @Size(min = 3, max =50, message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
+    @Size(min = 3, max =50, message = "'${validatedValue}' precisa ter entre {min} e {max} caracteres.")
     private String nome;
 
     @NotEmpty(message = "Preencha o campo corretamente.")
+    @CPF(message = "${validatedValue} é inválido!")
     private String cpf;
 
     @NotEmpty(message = "Preencha o campo corretamente.")
-    @Size(min = 3, max =50, message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
+    @Size(min = 3, max =50, message = "'${validatedValue}' precisa ter entre {min} e {max} caracteres.")
     private String bairro;
 
     @NotNull(message = "Prencha o campo corretamente.")

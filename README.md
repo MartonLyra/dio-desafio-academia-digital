@@ -207,9 +207,31 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
     ]
 
 
+### Video-Aula: Revisão do Projeto
+
+
 - Configuração no [application.yml](src/main/resources/application.yml):
   - da porta que a aplicação irá escutar as requisições web: _server.port: 8080_
   - maior detalhamento de log de nossa aplicação: _logging.level.org.hibernate.type: trace_
+
+### Video-Aula: Validação
+
+- Configuração no [application.yml](src/main/resources/application.yml):
+  - _spring.jpa.hibernate.ddl-auto: drop_ (com isso, o banco de dados será excluído quando a aplicação for iniciada. Retorne para _update_ quando quiser que seja novamente criada) 
+
+
+- De cara fiquei surpreso que o **Hibernate possui validação para CPF** "De Fábrica"! Basta colocar a anotação '@CPF' no DTO:  
+  - import org.hibernate.validator.constraints.br.CPF;  
+  - @CPF(message = "${validatedValue} é inválido!")  
+  - private String cpf;
+  - Inclusive, ao analisarmos o pacote 'org.hibernate.validator.constraints.br.CPF', podemos observar que o regexp invalida CPF´s com digitos iguais, repetidos! Os pontos, no formato do CPF são opcionais. E o cálculo do dígito verificador é checado!
+
+
+- Pegadinha: para as validações do DTO surtirem efeito, além das annotações no DTO, é necessário adicionar a annotation @Valid no parâmetro do método do controller. Veja:
+  - public Aluno create(**@Valid** @RequestBody AlunoDTO alunoDTO) { ... }
+
+
+ 
 
 ---
 _Base64:_ RGVzYWZpbyBESU8gIkFjYWRlbWlhIERpZ2l0YWwiLCBieSBNYXJ0b25MeXJhLCBpbmljaWFkbyBkaWEgMTMvMDQvMjAyMy4=

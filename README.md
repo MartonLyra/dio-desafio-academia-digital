@@ -122,11 +122,56 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Criei a package '**repository**' responsável pelo acesso ao banco de dados onde, no nosso caso, são interfaces que extendem de JpaRepository.
 
 
-- Implementei [AlunoController](src/main/java/me/dio/desafioacademiadigital/controller/AlunoController.java), [IAlunoService](src/main/java/me/dio/desafioacademiadigital/service/IAlunoService.java), [AlunoServiceImpl](src/main/java/me/dio/desafioacademiadigital/service/impl/AlunoServiceImpl.java) e [AlunoRepository](src/main/java/me/dio/desafioacademiadigital/repository/AlunoRepository.java) com o método getAll(LocalDate dataNascimento), cujo parâmetro dataNascimento é opcional.
+- Implementei [AlunoController](src/main/java/me/dio/desafioacademiadigital/controller/AlunoController.java), [IAlunoService](src/main/java/me/dio/desafioacademiadigital/service/IAlunoService.java), [AlunoServiceImpl](src/main/java/me/dio/desafioacademiadigital/service/impl/AlunoServiceImpl.java) e [AlunoRepository](src/main/java/me/dio/desafioacademiadigital/repository/AlunoRepository.java) com o método getAll(LocalDate dataNascimento), cujo parâmetro dataNascimento é opcional. Agora a aplicação responde às seguintes requisições:
+  - GET   http://localhost:8080/alunos
+  - GET   http://localhost:8080/alunos?dtNascimento=13/11/1978
 
 
-- Implementado e testado: Aluno.getAll() e Aluno.create()
+- Implementei e testei **Aluno.create()** nas classes especificadas acima:
 
+  - POST  http://localhost:8080/alunos/create
+    -  {
+          "nome": "MartonLyra",
+          "cpf": "12345678901",
+          "bairro": "Meu Bairro",
+          "dtNascimento": "1978-11-13"
+       }
+
+
+
+## 15/04/2023:
+
+
+### Video-Aula: CRUD - Parte 2
+
+- Instrutora Camila deu a dica do [plug-in do Chrome JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter-viewer-and/infnlhnhibphpaljmnnadaldibggkokb), que formata, no browser, objetos JSON´s para melhor visualização. Como estou fazendo as requisições via Postman, não instalei.
+
+
+- Sempre que vamos fazer acesso ao banco de dados com JPA, normalmente criamos uma interface que extende de public interface JpaRepository<>. Porém, nessa vídeo-aula a instrutora mostrou outra opção: extender a interface de CrudRepository. O JpaRepository<> extende de CrudRepository, portanto, o JpaRepository<> possui mais métodos e mais opções.
+
+
+- Implementamos, em todas as camadas, o método AvalizacaoFisica.create(). Agora nossa aplicação também responde a:
+  - POST   http://localhost:8080/avaliacoes/create
+    - Na requisição: 
+      {
+          "alunoId": 1,
+          "peso": 64.7,
+          "altura": 171.5
+      }
+    - Obtivemos a resposta:
+      {
+          "id": 1,
+          "aluno": {
+              "id": 1,
+              "nome": "Marton",
+              "cpf": "1122334455",
+              "bairro": "Meu Bairro",
+              "dtNascimento": "1978-11-13"
+          },
+          "dataDaAvaliacao": "2023-04-15T15:22:11.4870003",
+          "peso": 64.7,
+          "altura": 171.5
+      }
 
 
 

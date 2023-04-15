@@ -207,6 +207,9 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
     ]
 
 
+- Configuração no [application.yml](src/main/resources/application.yml):
+  - da porta que a aplicação irá escutar as requisições web: _server.port: 8080_
+  - maior detalhamento de log de nossa aplicação: _logging.level.org.hibernate.type: trace_
 
 ---
 _Base64:_ RGVzYWZpbyBESU8gIkFjYWRlbWlhIERpZ2l0YWwiLCBieSBNYXJ0b25MeXJhLCBpbmljaWFkbyBkaWEgMTMvMDQvMjAyMy4=

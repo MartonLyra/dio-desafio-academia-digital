@@ -57,6 +57,7 @@ public class AlunoServiceImpl implements IAlunoService {
 
     }
 
+    // Retorna todas as avalizações físicas do aluno:
     @Override
     public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
 

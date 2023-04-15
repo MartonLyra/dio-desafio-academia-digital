@@ -28,9 +28,12 @@ public class AlunoController {
         return service.create(alunoDTO);
     }
 
+
+    // Retorna as avaliações físicas do aluno
     @GetMapping("/avaliacoes/{id}")
     public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(@PathVariable Long id) {
-        return service.getAllAvaliacaoFisicaId(id);
+        List<AvaliacaoFisica> avaliacaoFisicaList = service.getAllAvaliacaoFisicaId(id);
+        return avaliacaoFisicaList;
     }
 
 

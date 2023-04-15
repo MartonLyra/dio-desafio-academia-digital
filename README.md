@@ -150,15 +150,15 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
 - Sempre que vamos fazer acesso ao banco de dados com JPA, normalmente criamos uma interface que extende de public interface JpaRepository<>. Porém, nessa vídeo-aula a instrutora mostrou outra opção: extender a interface de CrudRepository. O JpaRepository<> extende de CrudRepository, portanto, o JpaRepository<> possui mais métodos e mais opções.
 
 
-- Implementamos, em todas as camadas, o método AvalizacaoFisica.create(). Agora nossa aplicação também responde a:
+- Implementamos, em todas as camadas, o método **AvalizacaoFisica.create()**. Agora nossa aplicação também responde a:
   - POST   http://localhost:8080/avaliacoes/create
-    - Na requisição: 
+    - _Para a requisição_:
       {
           "alunoId": 1,
-          "peso": 64.7,
-          "altura": 171.5
+          "peso": 64.5,
+          "altura": 171.7
       }
-    - Obtivemos a resposta:
+    - _Obtivemos a resposta_:
       {
           "id": 1,
           "aluno": {
@@ -169,9 +169,42 @@ Pelo que entendi, você introduz algumas tags na classe do model e os _getters, 
               "dtNascimento": "1978-11-13"
           },
           "dataDaAvaliacao": "2023-04-15T15:22:11.4870003",
-          "peso": 64.7,
-          "altura": 171.5
+          "peso": 64.5,
+          "altura": 171.7
       }
+
+
+- Implementamos, em todas as camadas, o método **Aluno.getAllAvaliacaoFisicaId(idAluno)**. Agora nossa aplicação também responde a:
+  - GET   http://localhost:8080/alunos/avaliacoes/{id}
+    - _Obtivemos a seguinte resposta para o id=1_:
+    - [
+      {
+          "id": 1,
+          "aluno": {
+              "id": 1,
+              "nome": "Marton",
+              "cpf": "1122334455",
+              "bairro": "Meu Bairro",
+              "dtNascimento": "1978-11-13"
+      },
+          "dataDaAvaliacao": "2023-04-15T15:22:11.487",
+          "peso": 64.0,
+          "altura": 171.0
+      },
+      {
+          "id": 2,
+          "aluno": {
+              "id": 1,
+              "nome": "Marton",
+              "cpf": "1122334455",
+              "bairro": "Meu Bairro",
+              "dtNascimento": "1978-11-13"
+      },
+          "dataDaAvaliacao": "2023-04-15T15:32:23.652417",
+          "peso": 64.5,
+          "altura": 171.7
+      }
+    ]
 
 
 
